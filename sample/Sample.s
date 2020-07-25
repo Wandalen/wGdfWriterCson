@@ -3,5 +3,5 @@ let _ = require( 'wgdfwritercson' );
 
 /**/
 
-___
+console.log( '___ not implemented ___' );
 
