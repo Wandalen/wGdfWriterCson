@@ -2,15 +2,12 @@ format: outwillfile-2.0
 root:
   - wGdfWriterCson.out
 consistency:
-  wGdfWriterCson.out.will.yml: &ref_0
-    hash: 79a762180809d7af4f7839716b6dddcb
-    size: 37349
-  ../.ex.will.yml: &ref_1
+  ../.ex.will.yml: &ref_0
     hash: 984625a93f20fbc8231ecd2a26a8959b
     size: 1697
-  ../.im.will.yml: &ref_2
-    hash: 5689529d6bd4272fdc0818c96aebf465
-    size: 4737
+  ../.im.will.yml: &ref_1
+    hash: 2acc1faeb8ef1b002f761a29fecf09df
+    size: 4683
 module:
   wGdfWriterCson.out:
     about:
@@ -19,19 +16,19 @@ module:
       description: ___
       enabled: 1
       version: 0.4.0
-      interpreters:
+      interpreters: &ref_2
         - njs >= 10.0.0
         - chrome >= 60.0.0
         - firefox >= 60.0.0
-      keywords:
+      keywords: &ref_3
         - tools
         - wTools
       license: MIT
       author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors:
+      contributors: &ref_4
         - Kostiantyn Wandalen <wanalen@01.school>
       npm.name: wgdfwritercson
-      npm.scripts:
+      npm.scripts: &ref_5
         test: wtest .run proto/**
         docgen: wdocgen .build proto
     path:
@@ -682,24 +679,6 @@ module:
           content: prime
         inherit:
           - files.transpile
-      exported.proto.export:
-        opts:
-          filePath: 'reflector::exported.proto.export'
-        criterion:
-          generated: 1
-          content: proto
-          export: 1
-        inherit:
-          - files.reflect
-      exported.files.proto.export:
-        opts:
-          filePath: 'reflector::exported.files.proto.export'
-        criterion:
-          generated: 1
-          content: proto
-          export: 1
-        inherit:
-          - files.reflect
     build:
       proto.export:
         steps:
@@ -788,9 +767,8 @@ module:
           content: proto
           export: 1
     consistency:
-      wGdfWriterCson.out.will.yml: *ref_0
-      ../.ex.will.yml: *ref_1
-      ../.im.will.yml: *ref_2
+      ../.ex.will.yml: *ref_0
+      ../.im.will.yml: *ref_1
   ../:
     about:
       name: wGdfWriterCson
@@ -798,21 +776,13 @@ module:
       description: ___
       enabled: 1
       version: 0.4.0
-      interpreters:
-        - njs >= 10.0.0
-        - chrome >= 60.0.0
-        - firefox >= 60.0.0
-      keywords:
-        - tools
-        - wTools
+      interpreters: *ref_2
+      keywords: *ref_3
       license: MIT
       author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors:
-        - Kostiantyn Wandalen <wanalen@01.school>
+      contributors: *ref_4
       npm.name: wgdfwritercson
-      npm.scripts:
-        test: wtest .run proto/**
-        docgen: wdocgen .build proto
+      npm.scripts: *ref_5
     path:
       module.willfiles:
         criterion:
@@ -1468,6 +1438,5 @@ module:
         hash: 984625a93f20fbc8231ecd2a26a8959b
         size: 1697
       ../.im.will.yml:
-        hash: 5689529d6bd4272fdc0818c96aebf465
-        size: 4737
-      wGdfWriterCson.out.will.yml: *ref_0
+        hash: 2acc1faeb8ef1b002f761a29fecf09df
+        size: 4683
