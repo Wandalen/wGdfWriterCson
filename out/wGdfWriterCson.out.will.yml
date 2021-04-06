@@ -6,8 +6,8 @@ consistency:
     hash: 984625a93f20fbc8231ecd2a26a8959b
     size: 1697
   ../.im.will.yml: &ref_1
-    hash: 2acc1faeb8ef1b002f761a29fecf09df
-    size: 4683
+    hash: 20ebe56541d7ab5622334b3d1c9e0ef1
+    size: 4687
 module:
   wGdfWriterCson.out:
     about:
@@ -138,7 +138,7 @@ module:
         path: '{path::out.*=}/source/Index.s'
       npm.proto.entry:
         path:
-          - ../proto/wtools/Tools.s
+          - ../proto/node_modules/Tools
           - ../proto/node_modules/wgdfwritercson
       exported.dir.proto.export:
         criterion:
@@ -155,9 +155,9 @@ module:
           - ../proto
           - ../proto/Integration.test.ss
           - ../proto/node_modules
+          - ../proto/node_modules/Tools
           - ../proto/node_modules/wgdfwritercson
           - ../proto/wtools
-          - ../proto/wtools/Tools.s
           - ../proto/wtools/abase
           - ../proto/wtools/amid
           - ../proto/wtools/atop
@@ -890,7 +890,7 @@ module:
         path: '{path::out.*=}/source/Index.s'
       npm.proto.entry:
         path:
-          - proto/wtools/Tools.s
+          - proto/node_modules/Tools
           - proto/node_modules/wgdfwritercson
     submodule:
       wTools:
@@ -1438,5 +1438,5 @@ module:
         hash: 984625a93f20fbc8231ecd2a26a8959b
         size: 1697
       ../.im.will.yml:
-        hash: 2acc1faeb8ef1b002f761a29fecf09df
-        size: 4683
+        hash: 20ebe56541d7ab5622334b3d1c9e0ef1
+        size: 4687
